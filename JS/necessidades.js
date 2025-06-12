@@ -31,3 +31,27 @@ function renderizarLista(necessidades) {
     });
 }
 
+function filtrarLista() {
+    const termo = pesquisa.value.toLowerCase();
+    const tipoSelecionado = filtro.value;
+
+    const necessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
+
+    const filtradas = necessidades.filter(n => {
+        const tituloMatch = n.titulo.toLowerCase().includes(termo);
+        const descMatch = n.descricao.toLowerCase().includes(termo);
+        const tipoMatch = tipoSelecionado ? n.tipoAjuda === tipoSelecionado : true;
+
+        return (tituloMatch || descMatch) && tipoMatch;
+    });
+
+    renderizarLista(filtradas);
+}
+
+pesquisa.addEventListener('input', filtrarLista);
+filtro.addEventListener('change', filtrarLista);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const necessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
+    renderizarLista(necessidades);
+});
