@@ -30,3 +30,65 @@ footer {
     border-top: 1px solid #e0e0e0;
     margin-top: 3rem;
 }
+
+/* Botões */
+.btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a90e2, #007bff);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(8px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0056b3;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #444;
+}
+
+.card-text small {
+    display: block;
+    margin-top: 10px;
+    color: #6c757d;
+    font-style: italic;
+}
+
