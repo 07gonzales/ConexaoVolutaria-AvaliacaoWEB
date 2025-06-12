@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho e Rodapé */
+header, footer {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+footer {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 3rem;
+}
